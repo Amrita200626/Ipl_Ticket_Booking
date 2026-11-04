@@ -2,71 +2,71 @@
 
 ## Introduction
 
-The IPL Ticket Booking Website provides a simple and user-friendly interface to explore IPL match schedules, view ticket prices, and enter ticket booking details.
+The IPL Ticket Booking Website is a basic webpage created using HTML. It provides a simple structure to display IPL information, match schedules, ticket prices, and booking details.
 
-It features a soft pastel colour theme with a clean and organized layout.
+## Objective
 
-## Objectives
+- Create the basic structure of an IPL ticket booking webpage using HTML.
+- Organize website content into different sections.
+- Create navigation links between sections.
+- Display match information using tables.
+- Design a basic ticket booking form.
 
-- Create a webpage using HTML.
-- Apply CSS for an attractive and consistent design.
-- Display IPL match schedules and ticket prices.
-- Design a ticket booking form.
-- Organize information into different sections.
-
-## Technologies Used
+## Technology Used
 
 - HTML5
-- CSS3
 - Visual Studio Code
 
-## Website Features
+## HTML Elements Used
 
-1. **Home:** Welcome banner and navigation menu.
-2. **About IPL:** Information about IPL teams and stadiums.
-3. **Match Schedule:** Displays sample matches, dates, venues, and ticket prices.
-4. **Book Tickets:** Form to enter match and personal details.
-5. **Booking Summary:** Displays sample ticket details and pricing.
-6. **My Bookings:** Section for displaying booking information.
-7. **Guidelines:** Basic stadium entry instructions.
+- Headings and paragraphs
+- Navigation links
+- Ordered and unordered lists
+- Tables and table headings
+- Forms and input fields
+- Buttons and hyperlinks
+- Header, section, and footer elements
+
+## Website Sections
+
+1. **Header:** Website title and navigation menu.
+2. **Banner:** Welcome message with schedule and booking links.
+3. **About IPL:** Information about IPL teams and match venues.
+4. **Match Schedule:** Sample match details, venues, and ticket prices.
+5. **Ticket Booking Form:** Fields for match selection and personal details.
+6. **Booking Summary:** Displays sample ticket information.
+7. **My Bookings:** Section for booking details.
+8. **Guidelines:** Basic stadium entry instructions.
+9. **Footer:** Copyright information.
 
 ## File Structure
 
 ```text
 IPL-Ticket-Booking/
 │
-├── index.html
-├── style.css
-└── README.md
+└── index.html
 ```
 
-## How to View the Website
+## How to View the Webpage
 
-1. Open the folder in Visual Studio Code.
-2. Open the `index.html` file.
-3. Right-click and select **Open with Live Server**.
-4. The website will open in your browser.
+1. Open Visual Studio Code.
+2. Open the folder containing `index.html`.
+3. Right-click the HTML file.
+4. Select **Open with Live Server**.
+5. View the webpage in your browser.
 
 ## Learning Outcomes
 
-- Understanding HTML structure and elements.
-- Creating tables, forms, lists, and navigation links.
-- Connecting external CSS to HTML.
-- Applying colours, margins, padding, and borders.
-- Designing a clean and user-friendly interface.
-
-## Future Enhancements
-
-- Add interactive ticket booking.
-- Implement team filtering.
-- Calculate ticket prices automatically.
-- Display saved booking details.
-- Add online payment functionality.
+- Learned the basic structure of an HTML document.
+- Understood the use of different HTML tags.
+- Created tables and forms.
+- Practiced using hyperlinks and navigation.
+- Organized webpage content into meaningful sections.
 
 ## Note
 
-The website is currently a static frontend. Match details and ticket prices are illustrative and are not official IPL fixtures or prices. Actual ticket booking is not available.
+This is a basic HTML webpage. The match details and ticket prices are illustrative. The booking form is for demonstration and does not process actual bookings.
 
 ---
 
-**Developed using HTML and CSS**
+**Created using HTML5**
