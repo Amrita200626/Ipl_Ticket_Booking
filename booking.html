@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Ticket Booking Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>IPL 2026 Ticket Booking</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Tickets</a>
+        </nav>
+    </header>
+
+    <!-- Booking Form -->
+    <section>
+        <h2>Ticket Booking Form</h2>
+        <p>Fill in the details below to book your IPL tickets.</p>
+
+        <form action="#" method="get">
+
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name"
+                   minlength="3" maxlength="30" required>
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter 10-digit phone number"
+                   pattern="[0-9]{10}"
+                   title="Please enter a 10-digit phone number"
+                   required>
+
+            <br><br>
+
+            <!-- Match Selection -->
+            <label for="match">Select Match:</label>
+            <select id="match" name="match" required>
+                <option value="">-- Select a Match --</option>
+                <option value="CSK vs MI">CSK vs MI</option>
+                <option value="RCB vs KKR">RCB vs KKR</option>
+                <option value="MI vs SRH">MI vs SRH</option>
+                <option value="CSK vs RCB">CSK vs RCB</option>
+            </select>
+
+            <br><br>
+
+            <!-- Stand Category -->
+            <label for="stand">Stand Category:</label>
+            <select id="stand" name="stand" required>
+                <option value="">-- Select Stand --</option>
+                <option value="General">General</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <br><br>
+
+            <!-- Number of Tickets -->
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets"
+                   min="1" max="10" required>
+
+            <br><br>
+
+            <!-- Additional Preference -->
+            <p>Booking Preference:</p>
+
+            <input type="radio" id="online" name="preference"
+                   value="Online" required>
+            <label for="online">Online Payment</label>
+
+            <input type="radio" id="counter" name="preference"
+                   value="Counter">
+            <label for="counter">Counter Payment</label>
+
+            <br><br>
+
+            <!-- Buttons -->
+            <button type="submit">Submit Booking</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>IPL 2026 Ticket Booking</p>
+    </footer>
+
+</body>
+</html>
