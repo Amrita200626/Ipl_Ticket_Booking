@@ -102,6 +102,45 @@ th, td {
     font-weight: bold;
 }
 
+/* Booking Form and Summary */
+.booking-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+#bookingForm {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Booking Summary */
+.summary {
+    flex: 1;
+    background-color: #f5eff9;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5dce9;
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+
+.summary p {
+    padding: 8px 0;
+}
+
+.summary span {
+    font-weight: bold;
+    color: #8b6fa5;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #d8cadd;
+}
+
 /* Form Fields */
 input, select {
     padding: 10px;
@@ -109,10 +148,6 @@ input, select {
     border: 1px solid #d8cadd;
     border-radius: 6px;
     background-color: #fffdfd;
-}
-
-#bookingForm {
-    max-width: 500px;
 }
 
 #bookingForm input:not([type="radio"]),
@@ -168,6 +203,16 @@ footer {
     nav a {
         display: inline-block;
         margin: 6px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    #bookingForm,
+    .summary {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     table {
