@@ -14,27 +14,20 @@
 
         <nav>
             <a href="#matches">Matches</a>
-            <a href="booking.html">Book Ticket</a>
+            <a href="booking.html#booking">Book Ticket</a>
             <a href="#mybookings">My Bookings</a>
             <a href="#guidelines">Guidelines</a>
         </nav>
     </header>
 
-
     <!-- Banner Section -->
-    <section>
+    <section class="banner">
         <h1>Experience The Stadium Energy Live!</h1>
         <p>Book your tickets and enjoy IPL matches.</p>
 
-        <a href="#matches">
-            <button type="button">View Schedule</button>
-        </a>
-
-        <a href="booking.html">
-            <button type="button">Book Ticket</button>
-        </a>
+        <a href="#matches" class="button">View Schedule</a>
+        <a href="booking.html#booking" class="button">Book Ticket</a>
     </section>
-
 
     <!-- About IPL -->
     <section>
@@ -59,67 +52,81 @@
         </ul>
     </section>
 
-
     <!-- Match Schedule -->
     <section id="matches">
         <h2>Match Schedule</h2>
 
-        <label>Choose Team:</label>
-        <select>
+        <label for="team">Choose Team:</label>
+        <select id="team">
             <option>All Teams</option>
             <option>CSK</option>
             <option>MI</option>
             <option>RCB</option>
             <option>KKR</option>
+            <option>RR</option>
         </select>
 
-        <table border="1">
-            <tr>
-                <th>Match No.</th>
-                <th>Teams</th>
-                <th>Date & Time</th>
-                <th>Venue</th>
-                <th>General</th>
-                <th>Premium</th>
-                <th>VIP</th>
-                <th>Book</th>
-            </tr>
+        <div class="table-container">
+            <table border="1">
+                <tr>
+                    <th>Match No.</th>
+                    <th>Teams</th>
+                    <th>Date & Time</th>
+                    <th>Venue</th>
+                    <th>General</th>
+                    <th>Premium</th>
+                    <th>VIP</th>
+                    <th>Book</th>
+                </tr>
 
-            <tr>
-                <td>1</td>
-                <td>CSK vs MI</td>
-                <td>10 April, 7:30 PM</td>
-                <td>Chennai</td>
-                <td>800</td>
-                <td>1500</td>
-                <td>3000</td>
-                <td><a href="booking.html">Book</a></td>
-            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>CSK vs MI</td>
+                    <td>10 April, 7:30 PM</td>
+                    <td>Chennai</td>
+                    <td>₹800</td>
+                    <td>₹1500</td>
+                    <td>₹3000</td>
+                    <td>
+                        <a href="booking.html#booking"
+                           class="book-link">Book</a>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>2</td>
-                <td>RCB vs KKR</td>
-                <td>12 April, 7:30 PM</td>
-                <td>Bengaluru</td>
-                <td>900</td>
-                <td>1800</td>
-                <td>3500</td>
-                <td><a href="booking.html">Book</a></td>
-            </tr>
+                <tr>
+                    <td>2</td>
+                    <td>RCB vs KKR</td>
+                    <td>12 April, 7:30 PM</td>
+                    <td>Bengaluru</td>
+                    <td>₹900</td>
+                    <td>₹1800</td>
+                    <td>₹3500</td>
+                    <td>
+                        <a href="booking.html#booking"
+                           class="book-link">Book</a>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>3</td>
-                <td>MI vs RR</td>
-                <td>15 April, 3:30 PM</td>
-                <td>Mumbai</td>
-                <td>700</td>
-                <td>1400</td>
-                <td>2800</td>
-                <td><a href="booking.html">Book</a></td>
-            </tr>
-        </table>
+                <tr>
+                    <td>3</td>
+                    <td>MI vs RR</td>
+                    <td>15 April, 3:30 PM</td>
+                    <td>Mumbai</td>
+                    <td>₹700</td>
+                    <td>₹1400</td>
+                    <td>₹2800</td>
+                    <td>
+                        <a href="booking.html#booking"
+                           class="book-link">Book</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="note">
+            Note: Match dates and prices are sample details.
+        </p>
     </section>
-
 
     <!-- My Bookings -->
     <section id="mybookings">
@@ -139,7 +146,6 @@
         </table>
     </section>
 
-
     <!-- Guidelines -->
     <section id="guidelines">
         <h2>Guidelines</h2>
@@ -153,7 +159,6 @@
         <h3>3. Prohibited Items</h3>
         <p>Do not carry prohibited items inside the stadium.</p>
     </section>
-
 
     <!-- Footer -->
     <footer>

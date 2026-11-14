@@ -7,10 +7,14 @@ body {
     margin: 0;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header */
 header {
     background-color: #dcd3e8;
-    color: #454052;
     text-align: center;
     padding: 20px;
 }
@@ -24,7 +28,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #9b7bb5;
+    color: #8b6fa5;
 }
 
 /* Sections */
@@ -45,24 +49,30 @@ h3 {
     color: #aa829d;
 }
 
-/* Banner Section */
-section:first-of-type {
+/* Banner */
+.banner {
     background-color: #eee5f4;
     text-align: center;
     padding: 45px 20px;
 }
 
-/* Links and Buttons */
-button {
+/* Buttons */
+button,
+.button {
+    display: inline-block;
     background-color: #b99acb;
     color: white;
     padding: 10px 18px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     background-color: #9676ad;
 }
 
@@ -75,7 +85,6 @@ table {
 
 th {
     background-color: #dcd3e8;
-    color: #454052;
 }
 
 th, td {
@@ -84,12 +93,16 @@ th, td {
     text-align: center;
 }
 
-/* Table Links */
-td a {
-    color: #8b6fa5;
+.table-container {
+    overflow-x: auto;
 }
 
-/* Forms */
+.book-link {
+    color: #8b6fa5;
+    font-weight: bold;
+}
+
+/* Form Fields */
 input, select {
     padding: 10px;
     margin: 8px 0;
@@ -98,10 +111,49 @@ input, select {
     background-color: #fffdfd;
 }
 
+#bookingForm {
+    max-width: 500px;
+}
+
+#bookingForm input:not([type="radio"]),
+#bookingForm select {
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+/* Confirmation Message */
+.success {
+    color: green;
+}
+
+/* Toast Notification */
+#toast {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #8b6fa5;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Notes */
+.note {
+    font-size: 13px;
+    color: #777;
+}
+
 /* Footer */
 footer {
     background-color: #dcd3e8;
-    color: #454052;
     text-align: center;
     padding: 18px;
 }
@@ -120,5 +172,10 @@ footer {
 
     table {
         font-size: 12px;
+    }
+
+    #toast {
+        left: 15px;
+        right: 15px;
     }
 }
