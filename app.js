@@ -1,5 +1,5 @@
 
-// Activity 5: Toast Notification
+// Toast Notification
 var toastTimer;
 
 function showToast(message) {
@@ -13,12 +13,12 @@ function showToast(message) {
 
         toastTimer = setTimeout(function() {
             toast.style.display = "none";
-        }, 3000);
+        }, 8000);
     }
 }
 
 
-// Activity 5: Smooth Scrolling
+// Smooth Scrolling
 function scrollToBooking() {
     var booking = document.getElementById("booking");
 
@@ -38,13 +38,93 @@ window.onload = function() {
 };
 
 
-// Activity 7: DOM Selectors
+// Activity 8: Hamburger Menu
+var menuToggle = document.getElementById("menuToggle");
+var navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("open");
+
+        var isOpen = navLinks.classList.contains("open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.innerText = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.innerText = "☰";
+        });
+    });
+}
+
+
+// Activity 8: Team Filter
+var teamFilter = document.getElementById("team");
+var matchCards = document.querySelectorAll(".match-card");
+var noMatches = document.getElementById("noMatches");
+
+if (teamFilter) {
+    teamFilter.addEventListener("change", function() {
+        var selectedTeam = teamFilter.value;
+        var visibleCount = 0;
+
+        matchCards.forEach(function(card) {
+            var teams = card.dataset.teams.split(" ");
+
+            if (
+                selectedTeam === "all" ||
+                teams.includes(selectedTeam)
+            ) {
+                card.style.display = "block";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (noMatches) {
+            noMatches.hidden = visibleCount !== 0;
+        }
+    });
+}
+
+
+// Activity 8: Grid and List View
+var gridButton = document.getElementById("gridView");
+var listButton = document.getElementById("listView");
+var matchContainer = document.getElementById("matchContainer");
+
+if (gridButton && listButton && matchContainer) {
+
+    gridButton.addEventListener("click", function() {
+        matchContainer.classList.remove("list-view");
+
+        gridButton.setAttribute("aria-pressed", "true");
+        listButton.setAttribute("aria-pressed", "false");
+
+        showToast("Grid View Enabled!");
+    });
+
+    listButton.addEventListener("click", function() {
+        matchContainer.classList.add("list-view");
+
+        listButton.setAttribute("aria-pressed", "true");
+        gridButton.setAttribute("aria-pressed", "false");
+
+        showToast("List View Enabled!");
+    });
+}
+
+
+// Activity 7: Booking Summary
 var matchSelect = document.getElementById("match");
 var standSelect = document.getElementById("stand");
 var ticketInput = document.querySelector("#tickets");
 
-
-// Sample Ticket Prices
 var prices = {
     "CSK vs MI": {
         General: 800,
@@ -65,8 +145,6 @@ var prices = {
     }
 };
 
-
-// Activity 7: Update Booking Summary
 function updateSummary() {
     var match = matchSelect.value;
     var stand = standSelect.value;
@@ -104,8 +182,6 @@ function updateSummary() {
     }
 }
 
-
-// Activity 7: Event Listeners
 if (matchSelect && standSelect && ticketInput) {
     matchSelect.addEventListener("change", updateSummary);
     standSelect.addEventListener("change", updateSummary);
@@ -123,27 +199,22 @@ if (bookingForm) {
         event.preventDefault();
 
         bookingForm.style.display = "none";
-
         document.getElementById("summary").style.display = "none";
-
         document.getElementById("confirmation").style.display = "block";
 
         showToast("Booking form submitted successfully!");
     });
 
-    // Book Another Ticket
     document.getElementById("bookAgain")
         .addEventListener("click", function() {
             bookingForm.reset();
             bookingForm.style.display = "block";
-
             document.getElementById("summary").style.display = "block";
             document.getElementById("confirmation").style.display = "none";
 
             updateSummary();
         });
 
-    // Reset Summary
     bookingForm.addEventListener("reset", function() {
         setTimeout(updateSummary, 0);
     });
